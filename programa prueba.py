@@ -1,5 +1,7 @@
 import json
 
+with open('libreria.json', 'r') as archivo:
+    libreria_leida=json.load(archivo)
 #Programa para probar la FSM diseñada
 
 Codigo1 = []
