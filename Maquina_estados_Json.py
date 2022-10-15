@@ -23,7 +23,7 @@ import json
 
 Codigo1 = []
 
-lec = int(input("""Ingrese que maquina de estados desea utilizar:
+lec = int(input("""Ingrese que maquina de estados desea comprobar:
 
 1. FSM Complemento a dos
 2. FSM Suma binarios
@@ -40,5 +40,3 @@ if lec == 1:
         Codigo1.append(cod1)
         
 print (Codigo1)
-        
-     
