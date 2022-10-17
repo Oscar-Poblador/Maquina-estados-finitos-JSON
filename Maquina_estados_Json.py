@@ -1,6 +1,11 @@
 #Programa Maquina de estados finitos JSON
 import json
 
+Datos = [ {'Estado_actual' : ['0','0','1','1'] }, {'Entrada' : ['0','1','0','1']}, {'Salida' : ['0','1','1','0'] }, {'Estado_siguiente' : ['0','1','1','1']} ] 
+
+with open('Datos.json', 'w') as f:  # W es para escritura y f es la variable de manejo
+    json.dump(Datos, f)
+
 def ejemplos_prueba(a):
     ejemplos_entrada=        ["0001","0010","0011","0100","0101","0110"]
     ejemplo_estado_actual=   ["1110","1100","1110","1000","1110","1100"]
@@ -9,13 +14,11 @@ def ejemplos_prueba(a):
     salida=[ejemplos_entrada[a],ejemplo_estado_actual[a],ejemplo_estado_siguiente[a],ejemplos_salida[a]]
     return salida
 
-"""Datos = [ {'Estado_actual' : ['0','0','1','1'] }, {'Entrada' : ['0','1','0','1']}, {'Salida' : ['0','1','1','0'] }, {'Estado_siguiente' : ['0','1','1','1']} ] 
-print(Datos)
+Ej=ejemplos_prueba(0)
+print(Ej)
 
-with open('Maquina-estados-finitos-JSON/Datos.json', 'w') as f:  # W es para escritura y f es la variable de manejo
-    json.dump(Datos, f) """
-
-
+Entrada=list(Ej[0])
+print(Entrada)
 #with open('libreria.json', 'r') as archivo:
     #libreria_leida=json.load(archivo)
 #Programa para probar la FSM diseñada
@@ -38,6 +41,4 @@ with open('Maquina-estados-finitos-JSON/Datos.json', 'w') as f:  # W es para esc
         
 #print (Codigo1)
 #for j in range (5):
-b=ejemplos_prueba(0)
-print(b)
     #print(entradas[j])
