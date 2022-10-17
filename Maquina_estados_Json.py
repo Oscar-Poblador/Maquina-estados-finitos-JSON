@@ -1,4 +1,5 @@
 #Programa Maquina de estados finitos JSON
+import json
 class FMS_C2:
 
     ##FMS Suma
@@ -16,27 +17,39 @@ class FMS_C2:
                 if(estado_actual == 1):
                     salida[i]=0
                 
+    def ejemplos_prueba(a):
+        ejemplos_entrada=        ["0001","0010","0011","0100","0101","0110"]
+        ejemplo_estado_actual=   ["1110","1100","1110","1000","1110","1100"]
+        ejemplo_estado_siguiente=["1111","1110","1111","1100","1111","1110"]
+        ejemplos_salida=         ["1111","1110","1101","1100","1011","1010"]
+        salida=[ejemplos_entrada[a],ejemplo_estado_actual[a],ejemplo_estado_siguiente[a],ejemplos_salida[a]]
+        return salida
 
-import json
+    #def prueba(entrada_ejemplo,actual_ejemplo,siguiente_ejemplo,salida_ejemplo):
 
+#with open('libreria.json', 'r') as archivo:
+    #libreria_leida=json.load(archivo)
 #Programa para probar la FSM diseñada
 
-Codigo1 = []
+#Codigo1 = []
 
-lec = int(input("""Ingrese que maquina de estados desea comprobar:
+#lec = int(input("""Ingrese que maquina de estados desea comprobar:
+#1. FSM Complemento a dos
+#2. FSM Suma binarios
+#3. FSM Multiplicador por tres
+#Escriba el numero que desee (1/2/3): """))
 
-1. FSM Complemento a dos
-2. FSM Suma binarios
-3. FSM Multiplicador por tres
-
-Escriba el numero que desee (1/2/3): """))
-
-if lec == 1:
+#if lec == 1:
     
-    i = int(input ("Ingrese el numero de bits del codigo: "))
+ #   i = int(input ("Ingrese el numero de bits del codigo: "))
     
-    for x in range (i):
-        cod1 = int(input("Ingrese el bit numero "))
-        Codigo1.append(cod1)
+  #  for x in range (i):
+   #     cod1 = int(input("Ingrese el bit numero "))
+    #    Codigo1.append(cod1)
         
-print (Codigo1)
+#print (Codigo1)
+maquina= FMS_C2()
+#for j in range (5):
+b=maquina.ejemplos_prueba(1:2)
+print(b)
+    #print(entradas[j])
