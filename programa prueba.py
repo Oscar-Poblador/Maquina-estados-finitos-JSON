@@ -1,10 +1,21 @@
 import json
 
-with open('libreria.json', 'r') as archivo:
-    libreria_leida=json.load(archivo)
+
+with open('Datos.json') as archivo:
+    datosLeidos=json.load(archivo)
+
+print (datosLeidos)
+
 #Programa para probar la FSM diseñada
 
 Codigo1 = []
+
+estado_actuali = 0
+
+entradai = 0
+
+def complemento_a_dos (entrada, estado_actual):
+    pass
 
 lec = int(input("""Ingrese que maquina de estados desea comprobar:
 
@@ -14,12 +25,27 @@ lec = int(input("""Ingrese que maquina de estados desea comprobar:
 
 Escriba el numero que desee (1/2/3): """))
 
+
 if lec == 1:
-    
-    i = int(input ("Ingrese el numero de bits del codigo: "))
-    
-    for x in range (i):
-        cod1 = int(input("Ingrese el bit numero "))
-        Codigo1.append(cod1)
-        
-print (Codigo1)
+    if estado_actuali == 0:
+        if entradai == 0:
+            estado_sigi = 0
+            salida = 0 
+        if entradai == 1:
+            estado_sigi = 1
+            salida = 1
+    if estado_actuali == 1:
+        if entradai == 0:
+            estado_sigi = 1
+            salida = 1
+        if entradai == 1:
+            estado_sigi = 1
+            salida = 0
+
+            
+
+if lec == 2:
+    pass
+
+if lec == 3:
+    pass
