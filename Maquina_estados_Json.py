@@ -15,21 +15,13 @@ def ejemplos_prueba(a):
     return salida
  
 
-<<<<<<< HEAD
-#Datos = [ {'Estado_actual' : ['0','0','1','1'] }, {'Entrada' : ['0','1','0','1']}, {'Salida' : ['0','1','1','0'] }, {'Estado_siguiente' : ['0','1','1','1']} ] 
-#print(Datos)
 
-#with open('Maquina-estados-finitos-JSON/Datos.json', 'w') as f:  # W es para escritura y f es la variable de manejo
- #   json.dump(Datos, f)     
-    #def prueba(entrada_ejemplo,actual_ejemplo,siguiente_ejemplo,salida_ejemplo):
-    
-=======
 Ej=ejemplos_prueba(0)
 print(Ej)
 
 Entrada=list(Ej[0])
 print(Entrada)
->>>>>>> origin/JuanDavidR1
+
 #with open('libreria.json', 'r') as archivo:
     #libreria_leida=json.load(archivo)
 #Programa para probar la FSM diseñada
@@ -52,12 +44,10 @@ print(Entrada)
         
 #print (Codigo1)
 #for j in range (5):
-<<<<<<< HEAD
 
 
-b="a"
+b="x"
 print(b)
 
-=======
->>>>>>> origin/JuanDavidR1
-    #print(entradas[j])
+
+#print(entradas[j])
