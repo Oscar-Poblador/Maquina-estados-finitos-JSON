@@ -1,21 +1,6 @@
 #Programa Maquina de estados finitos JSON
 import json
 class FMS_C2:
-
-    ##FMS Suma
-    Entradas = [0,1,0,1,1]
-    Estados = [0,1]
-    salidas = []
-    estado_siguiente = []
-
-    def Transiciones(entrada, estado_actual):
-        for i in entrada:
-            if(entrada[i] == 0):
-                if(estado_actual == 0):
-                    salida[i]=0
-                    estado_siguiente[i]=0
-                if(estado_actual == 1):
-                    salida[i]=0
                 
     def ejemplos_prueba(a):
         ejemplos_entrada=        ["0001","0010","0011","0100","0101","0110"]
@@ -24,6 +9,7 @@ class FMS_C2:
         ejemplos_salida=         ["1111","1110","1101","1100","1011","1010"]
         salida=[ejemplos_entrada[a],ejemplo_estado_actual[a],ejemplo_estado_siguiente[a],ejemplos_salida[a]]
         return salida
+
 Datos = [ {'Estado_actual' : ['0','0','1','1'] }, {'Entrada' : ['0','1','0','1']}, {'Salida' : ['0','1','1','0'] }, {'Estado_siguiente' : ['0','1','1','1']} ] 
 print(Datos)
 
@@ -54,6 +40,6 @@ with open('Maquina-estados-finitos-JSON/Datos.json', 'w') as f:  # W es para esc
 #print (Codigo1)
 maquina= FMS_C2()
 #for j in range (5):
-b=maquina.ejemplos_prueba(1:2)
+b=maquina.ejemplos_prueba(1)
 print(b)
     #print(entradas[j])
