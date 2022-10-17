@@ -24,7 +24,11 @@ class FMS_C2:
         ejemplos_salida=         ["1111","1110","1101","1100","1011","1010"]
         salida=[ejemplos_entrada[a],ejemplo_estado_actual[a],ejemplo_estado_siguiente[a],ejemplos_salida[a]]
         return salida
+Datos = [ {'Estado_actual' : ['0','0','1','1'] }, {'Entrada' : ['0','1','0','1']}, {'Salida' : ['0','1','1','0'] }, {'Estado_siguiente' : ['0','1','1','1']} ] 
+print(Datos)
 
+with open('Maquina-estados-finitos-JSON/Datos.json', 'w') as f:  # W es para escritura y f es la variable de manejo
+    json.dump(Datos, f) 
     #def prueba(entrada_ejemplo,actual_ejemplo,siguiente_ejemplo,salida_ejemplo):
 
 #with open('libreria.json', 'r') as archivo:
