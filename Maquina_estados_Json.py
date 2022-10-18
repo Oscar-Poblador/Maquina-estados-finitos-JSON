@@ -1,7 +1,7 @@
 #Programa Maquina de estados finitos JSON
 import json
-
-Datos = {'Estado_actual' : [0,0,1,1] }, {'Entrada' : [0,1,0,1]}, {'Salida' : [0,1,1,0] }, {'Estado_siguiente' : [0,1,1,1]} 
+#------------------------->[mas,...,menos]         [1,0,1,1]
+Datos = {'Estado_actual' : [1,1,1,0] , 'Entrada' : [0,1,0,1], 'Salida' : [0,0,1,1] , 'Estado_siguiente' : [1,1,1,1]} 
 
 with open('Datos.json', 'w') as f:  # W es para escritura y f es la variable de manejo
     json.dump(Datos, f)
